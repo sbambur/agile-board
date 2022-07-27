@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { observer } from "mobx-react-lite";
+import Dashboard from "./components/Dashboard";
+import Header from "./components/Header";
+// import useStore from "./hooks/useStore";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Dashboard />
+      </main>
+    </>
   );
 }
 
-export default App;
+export default observer(App);
